@@ -28,41 +28,39 @@ namespace Login_Mysql
             // SQL 서버 연결
             string cs = "Server=192.168.0.53;port=3306;Database=test_db;Uid=root;Pwd=1111;";
             var con = new MySqlConnection(cs);
-            string login_status = "n";
 
-            try {
+            try
+            {
                 con.Open();
-                string stm = "select * from test1_hr where userid =@Userid AND userpw =@Userpw";
+                // name : username 입력란, password : userpw 입력란
+                string stm = $"select * from test1_hr where userid ='{name.Text}' AND userpw = '{password.Text}'";
+
                 var cmd = new MySqlCommand(stm, con);
+                MySqlDataReader rdr = cmd.ExecuteReader(); // F9키 : break
 
-                Console.WriteLine("입력 ID : "+ name.Text);
-                Console.WriteLine("입력 PW : "+ password.Text);
-                cmd.Parameters.AddWithValue("@Userid", name.Text); // name : username 입력란
-                cmd.Parameters.AddWithValue("@Userpw", password.Text); // password : userpw 입력란
-                
-                MySqlDataReader rdr = cmd.ExecuteReader();
-                while (rdr.Read())
+                if (rdr.HasRows) // boolean
                 {
-                    login_status = "y";
-                }
-                rdr.Close();
-
-                if (login_status.Equals("y"))
-                { // 로그인 성공 시
-                    Console.WriteLine("로그인 성공");
                     main_form();
                 }
-                else // 로그인 실패 시
+                else
                 {
-                    Console.WriteLine("로그인 실패");
+                    MessageBox.Show("로그인 실패");
+                    richTextBox1.AppendText($"로그인 실패(ID: '{name.Text}' / PW: '{password.Text}')\n");
+                    richTextBox1.ScrollToCaret();
+                    name.Text = "";
+                    password.Text = "";
+                    //name.Clear();
                 }
-            } catch (Exception ex) {
+            }
+            catch (Exception ex)
+            {
                 MessageBox.Show(ex.Message);
             }
             con.Close();
         }
 
-        private void main_form() {
+        private void main_form()
+        {
             this.Hide();
             main frm = new main();
             frm.ShowDialog();

@@ -40,6 +40,7 @@ namespace Login_Mysql
             this.login_btn = new System.Windows.Forms.Button();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
@@ -67,7 +68,6 @@ namespace Login_Mysql
             this.name.Name = "name";
             this.name.Size = new System.Drawing.Size(184, 38);
             this.name.TabIndex = 2;
-            this.name.Text = "username";
             // 
             // iconPictureBox1
             // 
@@ -104,7 +104,6 @@ namespace Login_Mysql
             this.password.PasswordChar = '⦁';
             this.password.Size = new System.Drawing.Size(184, 37);
             this.password.TabIndex = 3;
-            this.password.Text = "password";
             // 
             // iconPictureBox2
             // 
@@ -182,12 +181,26 @@ namespace Login_Mysql
             this.label1.TabIndex = 7;
             this.label1.Text = "Forgot Password?";
             // 
+            // richTextBox1
+            // 
+            this.richTextBox1.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.richTextBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.richTextBox1.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.richTextBox1.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.richTextBox1.ForeColor = System.Drawing.Color.Magenta;
+            this.richTextBox1.Location = new System.Drawing.Point(0, 403);
+            this.richTextBox1.Name = "richTextBox1";
+            this.richTextBox1.Size = new System.Drawing.Size(287, 78);
+            this.richTextBox1.TabIndex = 8;
+            this.richTextBox1.Text = "";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DarkSlateBlue;
-            this.ClientSize = new System.Drawing.Size(289, 435);
+            this.ClientSize = new System.Drawing.Size(287, 481);
+            this.Controls.Add(this.richTextBox1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.checkBox1);
             this.Controls.Add(this.login_btn);
@@ -224,6 +237,7 @@ namespace Login_Mysql
         private System.Windows.Forms.CheckBox checkBox1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox password;
+        private System.Windows.Forms.RichTextBox richTextBox1;
     }
 }
 
