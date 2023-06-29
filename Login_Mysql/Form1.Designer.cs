@@ -35,12 +35,12 @@ namespace Login_Mysql
             this.panel2 = new System.Windows.Forms.Panel();
             this.password = new System.Windows.Forms.TextBox();
             this.iconPictureBox2 = new FontAwesome.Sharp.IconPictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.exit_btn = new System.Windows.Forms.Button();
             this.login_btn = new System.Windows.Forms.Button();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.label1 = new System.Windows.Forms.Label();
             this.richTextBox1 = new System.Windows.Forms.RichTextBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
@@ -59,10 +59,11 @@ namespace Login_Mysql
             // 
             // name
             // 
-            this.name.BackColor = System.Drawing.Color.MediumPurple;
+            this.name.BackColor = System.Drawing.Color.Beige;
             this.name.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.name.Font = new System.Drawing.Font("한컴 고딕", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.name.ForeColor = System.Drawing.SystemColors.Window;
+            this.name.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.name.Font = new System.Drawing.Font("한컴 고딕", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.name.ForeColor = System.Drawing.Color.SteelBlue;
             this.name.Location = new System.Drawing.Point(40, 3);
             this.name.Multiline = true;
             this.name.Name = "name";
@@ -71,15 +72,16 @@ namespace Login_Mysql
             // 
             // iconPictureBox1
             // 
-            this.iconPictureBox1.BackColor = System.Drawing.Color.MediumPurple;
-            this.iconPictureBox1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.iconPictureBox1.BackColor = System.Drawing.Color.Beige;
+            this.iconPictureBox1.ForeColor = System.Drawing.Color.SkyBlue;
             this.iconPictureBox1.IconChar = FontAwesome.Sharp.IconChar.UserAlt;
-            this.iconPictureBox1.IconColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.iconPictureBox1.IconColor = System.Drawing.Color.SkyBlue;
             this.iconPictureBox1.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconPictureBox1.IconSize = 38;
+            this.iconPictureBox1.IconSize = 30;
             this.iconPictureBox1.Location = new System.Drawing.Point(3, 3);
             this.iconPictureBox1.Name = "iconPictureBox1";
             this.iconPictureBox1.Size = new System.Drawing.Size(38, 38);
+            this.iconPictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.iconPictureBox1.TabIndex = 0;
             this.iconPictureBox1.TabStop = false;
             // 
@@ -94,41 +96,31 @@ namespace Login_Mysql
             // 
             // password
             // 
-            this.password.BackColor = System.Drawing.Color.MediumPurple;
+            this.password.BackColor = System.Drawing.Color.Beige;
             this.password.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.password.Font = new System.Drawing.Font("한컴 고딕", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.password.ForeColor = System.Drawing.SystemColors.Window;
+            this.password.Font = new System.Drawing.Font("한컴 고딕", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.password.ForeColor = System.Drawing.Color.SteelBlue;
             this.password.Location = new System.Drawing.Point(40, 3);
             this.password.Multiline = true;
             this.password.Name = "password";
             this.password.PasswordChar = '⦁';
-            this.password.Size = new System.Drawing.Size(184, 37);
+            this.password.Size = new System.Drawing.Size(184, 38);
             this.password.TabIndex = 3;
             // 
             // iconPictureBox2
             // 
-            this.iconPictureBox2.BackColor = System.Drawing.Color.MediumPurple;
-            this.iconPictureBox2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.iconPictureBox2.BackColor = System.Drawing.Color.Beige;
+            this.iconPictureBox2.ForeColor = System.Drawing.Color.SkyBlue;
             this.iconPictureBox2.IconChar = FontAwesome.Sharp.IconChar.Lock;
-            this.iconPictureBox2.IconColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.iconPictureBox2.IconColor = System.Drawing.Color.SkyBlue;
             this.iconPictureBox2.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconPictureBox2.IconSize = 38;
+            this.iconPictureBox2.IconSize = 30;
             this.iconPictureBox2.Location = new System.Drawing.Point(3, 3);
             this.iconPictureBox2.Name = "iconPictureBox2";
             this.iconPictureBox2.Size = new System.Drawing.Size(38, 38);
+            this.iconPictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.iconPictureBox2.TabIndex = 0;
             this.iconPictureBox2.TabStop = false;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox1.BackgroundImage = global::Login_Mysql.Properties.Resources.icon1;
-            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox1.Location = new System.Drawing.Point(99, 71);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(100, 100);
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
             // 
             // exit_btn
             // 
@@ -147,7 +139,7 @@ namespace Login_Mysql
             // 
             // login_btn
             // 
-            this.login_btn.BackColor = System.Drawing.Color.MediumPurple;
+            this.login_btn.BackColor = System.Drawing.Color.SteelBlue;
             this.login_btn.FlatAppearance.BorderSize = 0;
             this.login_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.login_btn.Font = new System.Drawing.Font("한컴 고딕", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
@@ -174,7 +166,7 @@ namespace Login_Mysql
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.ForeColor = System.Drawing.Color.LightSalmon;
+            this.label1.ForeColor = System.Drawing.Color.Coral;
             this.label1.Location = new System.Drawing.Point(150, 315);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(107, 12);
@@ -187,18 +179,29 @@ namespace Login_Mysql
             this.richTextBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.richTextBox1.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.richTextBox1.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.richTextBox1.ForeColor = System.Drawing.Color.Magenta;
+            this.richTextBox1.ForeColor = System.Drawing.Color.Aqua;
             this.richTextBox1.Location = new System.Drawing.Point(0, 403);
             this.richTextBox1.Name = "richTextBox1";
             this.richTextBox1.Size = new System.Drawing.Size(287, 78);
             this.richTextBox1.TabIndex = 8;
             this.richTextBox1.Text = "";
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox1.BackgroundImage = global::Login_Mysql.Properties.Resources.icon1;
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox1.Location = new System.Drawing.Point(99, 71);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(100, 100);
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.DarkSlateBlue;
+            this.BackColor = System.Drawing.Color.SkyBlue;
             this.ClientSize = new System.Drawing.Size(287, 481);
             this.Controls.Add(this.richTextBox1);
             this.Controls.Add(this.label1);

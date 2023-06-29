@@ -13,6 +13,11 @@ namespace Login_Mysql
 {
     public partial class Form1 : Form
     {
+        MySqlConnection con;
+        MySqlCommand cmd;
+        MySqlDataReader rdr;
+        Class1 clscon = new Class1();
+
         public Form1()
         {
             InitializeComponent();
@@ -26,25 +31,23 @@ namespace Login_Mysql
         private void login_btn_Click(object sender, EventArgs e)
         {
             // SQL 서버 연결
-            string cs = "Server=192.168.0.53;port=3306;Database=test_db;Uid=root;Pwd=1111;";
-            var con = new MySqlConnection(cs);
-
+            con = new MySqlConnection(clscon.dbconnect());
             try
             {
                 con.Open();
                 // name : username 입력란, password : userpw 입력란
                 string stm = $"select * from test1_hr where userid ='{name.Text}' AND userpw = '{password.Text}'";
-
-                var cmd = new MySqlCommand(stm, con);
-                MySqlDataReader rdr = cmd.ExecuteReader(); // F9키 : break
+                cmd = new MySqlCommand(stm, con);
+                rdr = cmd.ExecuteReader(); // F9키 : break
 
                 if (rdr.HasRows) // boolean
                 {
-                    main_form();
+                    info_form(); // 리스트 페이지로 이동
                 }
                 else
                 {
-                    MessageBox.Show("로그인 실패");
+                    MessageBox.Show("로그인에 실패하였습니다.", "로그인 실패", 
+                                        MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     richTextBox1.AppendText($"로그인 실패(ID: '{name.Text}' / PW: '{password.Text}')\n");
                     richTextBox1.ScrollToCaret();
                     name.Text = "";
@@ -59,11 +62,11 @@ namespace Login_Mysql
             con.Close();
         }
 
-        private void main_form()
+        private void info_form()
         {
             this.Hide();
-            main frm = new main();
-            frm.ShowDialog();
+            Info_list list_form = new Info_list();
+            list_form.ShowDialog();
             this.Close();
         }
     }
